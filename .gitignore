@@ -1,0 +1,204 @@
+## SML/NJ stuff ##
+.cm/
+
+## C stuff ##
+
+# Prerequisites
+*.d
+.depend
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+## LaTeX stuff
+
+# Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Generated if empty string is given at "Please type another file name for output:"
+.pdf
+
+# Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build tool directories for auxiliary files
+# latexrun
+latex.out/
+
+## Other stuff ##
+*.tgz
+*.swp
+
+# macOS finder
+.DS_Store
+
+# autoconf files
+configure
+config.status
+autom4te.cache
+
+## Repo-specific files
+
+asdl/Makefile
+asdl/examples/Makefile
+asdl/doc/Makefile
+asdl/doc/manual-2.0/Makefile
+asdl/doc/manual-3.0/Makefile
+asdl/src/Makefile
+asdl/src/tests/basics/Makefile
+asdl/src/tests/options/Makefile
+asdl/src/tests/primitives/Makefile
+asdl/src/tests/sequences/Makefile
+asdl/src/tests/Makefile
+asdl/src/gen/fragments/Makefile
+asdl/src/asdlgen/Makefile
+asdl/src/lib/cxx/Makefile
+asdl/src/lib/Makefile
+base/cm/parse/cm.grm.desc
+base/cm/parse/cm.grm.sig
+base/cm/parse/cm.grm.sml
+base/cm/parse/cm.lex.sml
+base/compiler/Parse/lex/ml.lex.sml
+base/compiler/Parse/lex/sml.lex.sml
+base/compiler/Parse/parse/ml.grm.desc
+base/compiler/Parse/parse/ml.grm.sig
+base/compiler/Parse/parse/ml.grm.sml
+base/compiler/Parse/parse/sml.grm.desc
+base/compiler/Parse/parse/sml.grm.sig
+base/compiler/Parse/parse/sml.grm.sml
+base/runtime/c-libs/posix-filesys/ml_pathconf.h
+base/runtime/c-libs/posix-procenv/ml_sysconf.h
+base/runtime/objs/gen-offsets
+base/runtime/objs/gen-sizes
+base/runtime/objs/gen-unix-signals
+base/runtime/objs/gen-unix-sigtbl
+base/runtime/objs/ml-sizes.h
+base/runtime/objs/mlstate-offsets.h
+base/runtime/objs/prim.s
+base/runtime/objs/run.*
+base/runtime/objs/runx.*
+base/runtime/objs/system-signals.h
+base/runtime/objs/unix-sigtbl.c
+base/runtime/**/v-*
+base/system/sml.boot*
+base/system/sml.*-*
+doc/mk/doc-rules.gmk
+doc/Makefile
+doc/doc/html
+doc/doc/pdf
+doc/src/Makefile
+doc/src/changelog/Makefile
+doc/src/changelog/HISTORY.html
+doc/src/extensions/Makefile
+doc/src/install-notes/Makefile
+doc/src/man/Makefile
+doc/src/manuals/Makefile
+doc/src/release-notes/Makefile
+doc/src/release-notes/110.86-README.html
+doc/src/release-notes/110.87-README.html
+doc/src/release-notes/110.88-README.html
+doc/src/release-notes/110.89-README.html
+doc/src/release-notes/110.90-README.html
+doc/src/release-notes/110.91-README.html
+doc/src/release-notes/110.92-README.html
+doc/src/release-notes/110.93-README.html
+doc/src/release-notes/110.94-README.html
+doc/src/release-notes/110.95-README.html
+doc/src/release-notes/110.96-README.html
+doc/src/release-notes/110.97-README.html
+doc/src/release-notes/110.98-README.html
+doc/src/release-notes/110.98.1-README.html
+doc/src/release-notes/110.99-README.html
+doc/src/release-notes/110.99.1-README.html
+doc/src/release-notes/110.99.2-README.html
+doc/src/release-notes/110.99.3-README.html
+doc/src/release-notes/110.99.4-README.html
+doc/src/release-notes/110.99.5-README.html
+doc/src/release-notes/2021.1-README.html
+doc/src/smlnj-guide/Makefile
+smlnj-lib/Doc/bin
+smlnj-lib/Doc/doc
+smlnj-lib/Doc/Makefile
+smlnj-lib/Doc/src/index.html
+smlnj-lib/Doc/src/index.json
+smlnj-lib/Doc/src/Makefile
+smlnj-lib/Doc/src/*/*.html
+smlnj-lib/Doc/tools/bin/
+smlnj-lib/Doc/tools/Makefile
+smlnj-lib/Doc/tools/gen-pages/Makefile
+smlnj-lib/Doc/tools/gen-pages/config.sml
+smlnj-lib/Doc/tools/gen-pages/gen-pages.*
+smlnj-lib/Doc/tools/make-index/Makefile
+smlnj-lib/Doc/tools/make-index/make-index.*
+
+base/system/smlnj/internal/version.sml
+/bin/
+/lib/
+
+# files created when building a distribution (macOS or Windows)
+osx-dist/smlnj.dst
+osx-dist/smlnj-*.pkg
+win-dist/smlnj
+
