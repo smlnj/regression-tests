@@ -48,28 +48,41 @@ produces a file <testdir>/RESULTS.arch-os.
 Before running a regression test suite, any old copies of these files
 and directories should be removed (if not, the scripts will complain).
 
-### `bin/dotest.sh`
+### The `bin/dotest.sh` Script
 
 > `bin/dotest.sh` `<testdir>` [ *options* ]
 
 runs the tests in `<testdir>`, which should be one of the directories
 listed above (*e.g.*, `coresml`, `typing`, *etc*).  The options are
 
-* `-sml <filename>`
+* `-help` <br/>
+  prints a help message for the script
+
+* `-sml <filename>` <br/>
   the path to the sml command to be used.  If this option is not
   supplied, then the value of shell variable `SML` is used instead.
   If `SML` is not defined, then the default path `/usr/local/smlnj/bin/sml`
   is used.
 
-* `-diff`
+* `-diff` <br/>
   this option causes the diff between the test output and
   the corresponding reference output (in `<testdir>/outputs`) to be
   included in the `RESULT` file, overriding the default behavior, which
   is to include the old and new outputs in full.
 
-### `bin/doallseq.sh`
+### The `bin/doallseq.sh` Script
 
-### `bin/doallpar.sh`
+> `bin/doallseq.sh` [ *options* ]
+
+runs all of test suites sequentially.  The options are the same as for
+the `dotest.sh` script.
+
+### The `bin/doallpar.sh` Script
+
+> `bin/doallpar.sh` [ *options* ]
+
+runs all of test suites in parallel.  The options are the same as for
+the `dotest.sh` script.
 
 ## Example
 
