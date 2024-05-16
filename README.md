@@ -7,11 +7,15 @@ running them.
 
 There are a number of active test suites, found in the directories:
 
+* `basis` -- Basis tests (based on tests from Peter Sestoft)[^filesys]
 * `coresml` -- core SML tests (based on tests from Peter Sestoft)
 * `typing` -- type checking
 * `modules` -- modules
-* `bugs` -- bug tests
-* `basis` -- Basis tests (based on tests from Peter Sestoft)[^filesys]
+* `gforge-bugs` -- tests for bugs reported in the old bug-tracking system
+* `legacy-issues` -- tests for issues raised for the
+   [legacy version](https://github.com/smlnj/legacy) of SML/NJ
+* `issues` -- tests for issues raised for the
+   [development version](https://github.com/smlnj/smlnj) of SML/NJ
 * `printing` -- miscellaneous printing tests
 
 Each test suite directory contains two subdirectories
