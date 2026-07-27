@@ -12,7 +12,7 @@ There are a number of active test suites, found in the directories:
 * `typing` -- type checking
 * `modules` -- modules
 * `gforge-bugs` -- tests for bugs reported in the old bug-tracking system
-* `legacy-issues` -- tests for issues raised for the
+* `legacy` -- tests for issues raised for the
    [legacy version](https://github.com/smlnj/legacy) of SML/NJ
 * `issues` -- tests for issues raised for the
    [development version](https://github.com/smlnj/smlnj) of SML/NJ
