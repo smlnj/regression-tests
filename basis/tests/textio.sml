@@ -342,7 +342,7 @@ val _ =
 
 (* test that canInput works correctly *)
 local
-  (* a TextPrimIO reader over a string with a SMALL chunk size, so that the
+  (* a TextPrimIO reader over a string with a small chunk size, so that the
    * StreamIO layer really does chain several buffers
    *)
   fun mkRd (src, chunk) = let
