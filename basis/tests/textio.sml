@@ -340,4 +340,50 @@ val _ =
 	stde " <--- this should read abcde\n"
     end;
 
+(* test that canInput works correctly *)
+local
+  (* a TextPrimIO reader over a string with a SMALL chunk size, so that the
+   * StreamIO layer really does chain several buffers
+   *)
+  fun mkRd (src, chunk) = let
+        val pos = ref 0
+        val len = String.size src
+        fun readV n = let
+              val p = !pos
+              val m = Int.min(n, len-p)
+              in pos := p+m; String.substring(src, p, m) end
+        in
+          TextPrimIO.RD{
+              name = "<test>", chunkSize = chunk,
+              readVec = SOME readV, readArr = NONE,
+              readVecNB = SOME(SOME o readV), readArrNB = NONE,
+              block = SOME(fn () => ()), canInput = SOME(fn () => true),
+              avail = fn () => SOME(Position.fromInt(len - !pos)),
+              getPos = NONE, setPos = NONE, endPos = NONE, verifyPos = NONE,
+              close = fn () => (), ioDesc = NONE
+            }
+        end
+  val src = "0123456789ABCDEFGHIJ";              (* 20 characters *)
+  fun fresh () = TextIO.StreamIO.mkInstream (mkRd (src, 5), "");
+  fun checkCI (strm, n, expect) = (case TextIO.StreamIO.canInput (strm, n)
+         of NONE => false
+          | SOME k => (k = expect)
+        (* end case *));
+  val (_, strm) = TextIO.StreamIO.inputN (fresh (), 3);  (* 2 left in buffer 0 *)
+in
+val test13a = check' (fn () => checkCI(strm, 2, 2))
+val test13b = check' (fn () => checkCI(strm, 7, 7))
+val test13c = check' (fn () => checkCI(strm, 17, 17))
+val test13d = check' (fn () => checkCI(strm, 99, 17))
+
+(* check that canInput does not consume data *)
+val test14 = check' (fn () => let
+      val (_, strm) = TextIO.StreamIO.inputN (fresh (), 3)
+      in
+        checkCI(strm, 17, 17)
+        andalso #1(TextIO.StreamIO.inputN (strm, 12)) = "3456789ABCDE"
+      end)
+end; (* local *)
+
+
 end
